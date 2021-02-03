@@ -1,0 +1,10 @@
+<center>
+	Username: <%= @result.name %><br>
+	<ul>
+		<% @result.repositories.nodes.each do |repository| %>
+			<li>
+				<%= repository.name %>
+			</li>
+		<% end %>
+	</ul>
+</center>
