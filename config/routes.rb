@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  resources :repositories, param: :username, only: [:show]
+  resource :repository, only: [:index, :show]
+  
+  root to: 'repositories#index'
 end

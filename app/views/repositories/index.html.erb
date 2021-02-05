@@ -1,0 +1,8 @@
+<center>
+  <%= form_tag repository_path, method: :get, remote: true do |f| %>
+    <%= label_tag :username, 'GitHub username' %>
+    <%= text_field_tag :username %>
+    <%= submit_tag "Fetch" %>
+  <% end %>
+</center>
+<div id='repositories'></div>
