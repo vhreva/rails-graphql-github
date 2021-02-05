@@ -1,6 +1,7 @@
+<%= stylesheet_link_tag 'index' %>
 <center>
   <%= form_tag repository_path, method: :get, remote: true do |f| %>
-    <%= label_tag :username, 'GitHub username' %>
+    <%= label_tag :username, 'GitHub login' %>
     <%= text_field_tag :username %>
     <%= submit_tag "Fetch" %>
   <% end %>
