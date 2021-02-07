@@ -18,14 +18,14 @@ http_interactions:
       Content-Type:
       - application/json
       Authorization:
-      - Bearer 56f5d8d3019da51b10a949cbc037db
+      - Bearer 4a3236f1a0e2eee0426a39a112130c4160157f14
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 06 Feb 2021 13:03:16 GMT
+      - Sun, 07 Feb 2021 17:28:10 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -35,7 +35,7 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Oauth-Scopes:
-      - repo, workflow, write:packages
+      - repo
       X-Accepted-Oauth-Scopes:
       - repo
       X-Github-Media-Type:
@@ -43,11 +43,11 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4989'
+      - '4996'
       X-Ratelimit-Reset:
-      - '1612619088'
+      - '1612722380'
       X-Ratelimit-Used:
-      - '11'
+      - '4'
       Access-Control-Expose-Headers:
       - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
         X-RateLimit-Used, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes,
@@ -70,9 +70,9 @@ http_interactions:
       - Accept-Encoding
       - Accept-Encoding, Accept, X-Requested-With
       X-Github-Request-Id:
-      - 1725:AA74:4F836E5:5873A7F:601E9394
+      - 8BFA:4F05:3160344:36C3EC3:6020232A
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"user":{"name":"Vitaliy Hreva","repositories":{"nodes":[{"name":"rails-graphql-github"},{"name":"rails-practice"},{"name":"react-practice"},{"name":"js-tip-calculator"},{"name":"quote-app"},{"name":"simple-node-server"},{"name":"FL-12"},{"name":"FL-11"},{"name":"FLX"},{"name":"fl-9"},{"name":"votes-app"},{"name":"shop"},{"name":"letters_counter"},{"name":"responsive-website"},{"name":"GitGutter"}]}}}}'
-  recorded_at: Sat, 06 Feb 2021 13:03:16 GMT
+      string: '{"data":{"user":{"name":"Vitaliy Hreva","repositories":{"nodes":[{"name":"rails-graphql-github"},{"name":"rails-practice"}]}}}}'
+  recorded_at: Sun, 07 Feb 2021 17:28:10 GMT
 recorded_with: VCR 6.0.0

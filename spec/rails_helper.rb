@@ -10,6 +10,7 @@ abort('The Rails environment is running in production mode!') if Rails.env.produ
 require 'rspec/rails'
 # Add additional requires below this line. Rails is not loaded until this point!
 require 'vcr'
+require 'webmock/rspec'
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
@@ -36,11 +37,17 @@ rescue ActiveRecord::PendingMigrationError => e
 end
 
 VCR.configure do |config|
-  config.cassette_library_dir = 'fixtures/vcr_cassettes'
+  config.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
   config.hook_into :webmock
 end
 
 RSpec.configure do |config|
+  config.before(:each) do 
+    stub_request(:post, /api.gihub.com\/graphql/).
+      with(headers:{ 'Authorization' => "Bearer #{ENV['GITHUB_ACCESS_TOKEN']}" }).
+      to_return(status: 200, body: '', headers: {})
+  end
+
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
