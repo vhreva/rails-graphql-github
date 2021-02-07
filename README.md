@@ -1,24 +1,39 @@
-# README
+# Rails GraphQl GitHub
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##### 1. Check out the repository
 
-Things you may want to cover:
+```bash
+git clone https://github.com/vhreva/rails-graphql-github
+```
+Go to the project directory.
 
-* Ruby version
+```bash
+cd rails-graphql-github/
+```
 
-* System dependencies
+##### 2. Create access token and setup the project.
 
-* Configuration
+Run the following commands to set all dependencies and install missing gems.
 
-* Database creation
+```ruby
+bundle install
+```
 
-* Database initialization
+Install webpacker.
 
-* How to run the test suite
+```ruby
+rails webpacker:install
+```
+Now you need a generate [GitHub API access token](https://help.github.com/articles/creating-an-access-token-for-command-line-use) to make GraphQL API requests. 
 
-* Services (job queues, cache servers, search engines, etc.)
+This token should be set as a `GITHUB_ACCESS_TOKEN` environment as configured in [.env.development]
 
-* Deployment instructions
+##### 4. Start the Rails server
 
-* ...
+You can start the rails server using this command.
+
+```ruby
+rails s
+```
+
+And now you can visit the site with the URL [http://localhost:3000/](http://localhost:3000/).
