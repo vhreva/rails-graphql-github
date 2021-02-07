@@ -1,13 +1,13 @@
+# frozen_string_literal: true
+
 class RepositoriesController < ApplicationController
-	def index
-	end
+  def index; end
 
-	def show
-		@result = Repository.new.execute(params[:username])
+  def show
+    @result = Repository.new.execute(params[:username])
 
-		respond_to do |f| 
-			f.html {redirect_to :index}
-			f.js
-		end
-	end
+    respond_to do |format|
+      format.js
+    end
+  end
 end

@@ -1,0 +1,78 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.github.com/graphql
+    body:
+      encoding: UTF-8
+      string: '{"query":"query GitHub__Query($username: String!) {\n  user(login:
+        $username) {\n    name\n    repositories(first: 100, orderBy: {field: PUSHED_AT,
+        direction: DESC}) {\n      nodes {\n        name\n      }\n    }\n  }\n}","variables":{"username":"vhreva"},"operationName":"GitHub__Query"}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer 56f5d8d3019da51b10a949cbc037db
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 06 Feb 2021 13:03:16 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - GitHub.com
+      Cache-Control:
+      - no-cache
+      X-Oauth-Scopes:
+      - repo, workflow, write:packages
+      X-Accepted-Oauth-Scopes:
+      - repo
+      X-Github-Media-Type:
+      - github.v4
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4989'
+      X-Ratelimit-Reset:
+      - '1612619088'
+      X-Ratelimit-Used:
+      - '11'
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Used, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes,
+        X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'none'
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding, Accept, X-Requested-With
+      X-Github-Request-Id:
+      - 1725:AA74:4F836E5:5873A7F:601E9394
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":{"user":{"name":"Vitaliy Hreva","repositories":{"nodes":[{"name":"rails-graphql-github"},{"name":"rails-practice"},{"name":"react-practice"},{"name":"js-tip-calculator"},{"name":"quote-app"},{"name":"simple-node-server"},{"name":"FL-12"},{"name":"FL-11"},{"name":"FLX"},{"name":"fl-9"},{"name":"votes-app"},{"name":"shop"},{"name":"letters_counter"},{"name":"responsive-website"},{"name":"GitGutter"}]}}}}'
+  recorded_at: Sat, 06 Feb 2021 13:03:16 GMT
+recorded_with: VCR 6.0.0
